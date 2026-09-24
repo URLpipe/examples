@@ -1,0 +1,48 @@
+{
+  "name": "URLpipe: URL to Markdown",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "6f1a2b3c-1d2e-4f50-8a9b-0c1d2e3f4a51",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://urlpipe.dev/markdown",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"url\": \"https://example.com\",\n  \"sync\": true\n}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "text",
+              "outputPropertyName": "markdown"
+            }
+          },
+          "timeout": 70000
+        }
+      },
+      "id": "6f1a2b3c-1d2e-4f50-8a9b-0c1d2e3f4a52",
+      "name": "URLpipe: Markdown",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [240, 0]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          { "node": "URLpipe: Markdown", "type": "main", "index": 0 }
+        ]
+      ]
+    }
+  },
+  "settings": { "executionOrder": "v1" }
+}
