@@ -35,7 +35,7 @@ php lighthouse_audit_async.php
 
 ## Handle errors and retries
 
-`json_decode()` returns `null` for a body that is not JSON (a 401 answers in plain text), and `?: []` turns that into an empty array. `CURLOPT_HEADERFUNCTION` is how curl hands you response headers one line at a time.
+`json_decode()` returns `null` for a body that is not JSON (a proxy or load balancer in front of the API can answer in HTML), and `?: []` turns that into an empty array. `CURLOPT_HEADERFUNCTION` is how curl hands you response headers one line at a time.
 
 [`lighthouse_audit_errors.php`](lighthouse_audit_errors.php)
 

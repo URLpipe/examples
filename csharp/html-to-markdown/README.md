@@ -37,7 +37,7 @@ dotnet run
 
 ## Handle errors and retries
 
-A local function keeps the retry rules next to the call, and the exception type is declared after the top-level statements, where C# requires it. `RetryAfter.Delta` is the parsed Retry-After header, and a body that is not JSON (a 401 answers in plain text) leaves every field null.
+A local function keeps the retry rules next to the call, and the exception type is declared after the top-level statements, where C# requires it. `RetryAfter.Delta` is the parsed Retry-After header, and a body that is not JSON (a proxy in front of the API can answer in HTML) leaves every field null.
 
 [`Program.cs`](Program.cs)
 

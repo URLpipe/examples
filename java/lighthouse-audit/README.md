@@ -36,7 +36,7 @@ java -cp gson-2.13.1.jar LighthouseAuditAsync.java
 
 ## Handle errors and retries
 
-A checked `URLpipeException` makes the caller decide what a refusal means. `firstValueAsLong` reads Retry-After without a parse of your own, and a body that is not JSON (a 401 answers in plain text) falls back to an empty object.
+A checked `URLpipeException` makes the caller decide what a refusal means. `firstValueAsLong` reads Retry-After without a parse of your own, and a body that is not JSON (a proxy in front of the API can answer in HTML) falls back to an empty object.
 
 [`LighthouseAuditErrors.java`](LighthouseAuditErrors.java)
 

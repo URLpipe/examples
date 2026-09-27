@@ -35,7 +35,7 @@ python3 page_metadata_async.py
 
 ## Handle errors and retries
 
-`raise_for_status()` is fine for a script; a service wants to tell the failures apart. Check the status before calling `res.json()` — a 401 body is not JSON. `sys.exit(message)` prints to stderr and exits 1.
+`raise_for_status()` is fine for a script; a service wants to tell the failures apart. Check the status before calling `res.json()` — an error from a proxy in front of the API may not be JSON. `sys.exit(message)` prints to stderr and exits 1.
 
 [`page_metadata_errors.py`](page_metadata_errors.py)
 
