@@ -27,8 +27,8 @@ receiver that verifies signatures.
 - [Pipedream](integrations/pipedream) — Call URLpipe from a Pipedream Node.js step with fetch, and use an HTTP trigger's endpoint as the webhook for async results.
 - [Google Sheets](integrations/google-sheets) — Pull titles, descriptions and Lighthouse scores into a spreadsheet with a short Apps Script and UrlFetchApp.
 - [Airtable](integrations/airtable) — Enrich Airtable records with page metadata and screenshot links from an automation's Run a script action.
-- [LangChain](integrations/langchain) — A 20-line LangChain document loader over /markdown: rendered pages in, Documents with source metadata out.
-- [LlamaIndex](integrations/llamaindex) — A short LlamaIndex reader over /markdown: rendered pages in, Documents with their source URL out, ready for an index.
+- [LangChain](integrations/langchain) — langchain-urlpipe: four agent tools that read any page, JavaScript included, and a document loader for RAG.
+- [LlamaIndex](integrations/llamaindex) — llama-index-readers-urlpipe: a reader that loads any page, JavaScript included, as a Markdown Document ready to index.
 
 For AI agents, the hosted MCP server is set up in [URLpipe/mcp](https://github.com/URLpipe/mcp).
 
