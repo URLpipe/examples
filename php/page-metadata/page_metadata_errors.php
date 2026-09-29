@@ -70,4 +70,4 @@ try {
 $meta = json_decode($body, true);
 echo "Title: " . ($meta["title"] ?? "none") . "\n";
 echo "Description: " . ($meta["description"] ?? "none") . "\n";
-echo "Image: " . ($meta["main_image_url"] ?? "none") . "\n";
+echo "Image: " . ($meta["image"]["url"] ?? "none") . "\n";

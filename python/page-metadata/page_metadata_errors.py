@@ -58,4 +58,4 @@ except requests.RequestException as error:
 meta = res.json()
 print("Title:", meta["title"] or "none")
 print("Description:", meta["description"] or "none")
-print("Image:", meta["main_image_url"] or "none")
+print("Image:", (meta["image"] or {}).get("url") or "none")

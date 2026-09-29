@@ -50,4 +50,4 @@ urlpipe /meta '{"url": "https://example.com", "sync": true}' || exit 1
 
 jq -r '"Title: \(.title // "none")",
        "Description: \(.description // "none")",
-       "Image: \(.main_image_url // "none")"' "$response"
+       "Image: \(.image.url // "none")"' "$response"

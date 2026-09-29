@@ -52,4 +52,4 @@ try {
 const meta = await res.json();
 console.log(`Title: ${meta.title ?? "none"}`);
 console.log(`Description: ${meta.description ?? "none"}`);
-console.log(`Image: ${meta.main_image_url ?? "none"}`);
+console.log(`Image: ${meta.image?.url ?? "none"}`);

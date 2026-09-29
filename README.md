@@ -23,7 +23,7 @@ receiver that verifies signatures.
 
 ## Integrations
 
-- [n8n](integrations/n8n) — Call URLpipe from n8n's HTTP Request node — an importable workflow for sync calls, and a Webhook node for async results.
+- [n8n](integrations/n8n) — The URLpipe community node for n8n: Markdown, screenshots, metadata, console errors and Lighthouse in any workflow.
 - [Pipedream](integrations/pipedream) — Call URLpipe from a Pipedream Node.js step with fetch, and use an HTTP trigger's endpoint as the webhook for async results.
 - [Google Sheets](integrations/google-sheets) — Pull titles, descriptions and Lighthouse scores into a spreadsheet with a short Apps Script and UrlFetchApp.
 - [Airtable](integrations/airtable) — Enrich Airtable records with page metadata and screenshot links from an automation's Run a script action.

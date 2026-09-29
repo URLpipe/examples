@@ -90,9 +90,11 @@ func main() {
 	}
 
 	var meta struct {
-		Title        *string `json:"title"`
-		Description  *string `json:"description"`
-		MainImageURL *string `json:"main_image_url"`
+		Title       *string `json:"title"`
+		Description *string `json:"description"`
+		Image       *struct {
+			URL string `json:"url"`
+		} `json:"image"`
 	}
 	if err := json.Unmarshal(body, &meta); err != nil {
 		log.Fatal(err)
@@ -105,5 +107,9 @@ func main() {
 	}
 	fmt.Println("Title:", orNone(meta.Title))
 	fmt.Println("Description:", orNone(meta.Description))
-	fmt.Println("Image:", orNone(meta.MainImageURL))
+	image := "none"
+	if meta.Image != nil {
+		image = meta.Image.URL
+	}
+	fmt.Println("Image:", image)
 }

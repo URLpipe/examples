@@ -29,6 +29,6 @@ const table = base.getTable("Links");
 await table.updateRecordAsync(recordId, {
   Title: meta.title ?? "",
   Description: meta.description ?? "",
-  Image: meta.main_image_url ?? null,
+  Image: meta.image?.url ?? null,
   Screenshot: shotRes.ok ? shotRes.headers.get("X-Result-Url") : null,
 });

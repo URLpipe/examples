@@ -1,6 +1,6 @@
 # URLpipe in n8n
 
-Call URLpipe from n8n's HTTP Request node — an importable workflow for sync calls, and a Webhook node for async results.
+The URLpipe community node for n8n: Markdown, screenshots, metadata, console errors and Lighthouse in any workflow.
 
 The setup, step by step, is at [https://urlpipe.dev/integrations/n8n](https://urlpipe.dev/integrations/n8n).
 

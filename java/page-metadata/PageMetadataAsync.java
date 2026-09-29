@@ -5,6 +5,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
+import java.util.Arrays;
 
 public class PageMetadataAsync {
     static final String API = "https://urlpipe.dev";
@@ -61,9 +62,9 @@ public class PageMetadataAsync {
         String body = response.body();
 
         JsonElement meta = JsonParser.parseString(body);
-        String[][] fields = {{"Title", "title"}, {"Description", "description"}, {"Image", "main_image_url"}};
+        String[][] fields = {{"Title", "title"}, {"Description", "description"}, {"Image", "image", "url"}};
         for (String[] field : fields) {
-            JsonElement value = dig(meta, field[1]);
+            JsonElement value = dig(meta, Arrays.copyOfRange(field, 1, field.length));
             System.out.println(field[0] + ": " + (value == null ? "none" : value.getAsString()));
         }
     }

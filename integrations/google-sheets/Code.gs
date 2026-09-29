@@ -24,7 +24,7 @@ function urlpipe_(path, body) {
 function URLPIPE_META(url) {
   if (!url) return "";
   const m = urlpipe_("/meta", { url: url });
-  return [[m.title, m.description, m.main_image_url]];
+  return [[m.title, m.description, m.image ? m.image.url : null]];
 }
 
 /** Adds a menu that fills column E with mobile performance scores. */

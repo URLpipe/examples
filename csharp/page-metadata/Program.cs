@@ -21,7 +21,7 @@ catch (URLpipeException e)
 var meta = JsonNode.Parse(body)!;
 Console.WriteLine($"Title: {meta["title"]?.GetValue<string>() ?? "none"}");
 Console.WriteLine($"Description: {meta["description"]?.GetValue<string>() ?? "none"}");
-Console.WriteLine($"Image: {meta["main_image_url"]?.GetValue<string>() ?? "none"}");
+Console.WriteLine($"Image: {meta["image"]?["url"]?.GetValue<string>() ?? "none"}");
 return 0;
 
 // POST a sync request and return the result body; retry the two 429s that clear by themselves.

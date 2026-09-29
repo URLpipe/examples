@@ -40,4 +40,4 @@ end
 meta = JSON.parse(res.body)
 puts "Title: #{meta["title"] || "none"}"
 puts "Description: #{meta["description"] || "none"}"
-puts "Image: #{meta["main_image_url"] || "none"}"
+puts "Image: #{meta.dig("image", "url") || "none"}"
