@@ -3,7 +3,7 @@
 set -euo pipefail
 
 endpoint=${1:-http://localhost:8000/webhooks/urlpipe}
-body='{"token":"test_token","operation":"markdown","labels":{},"success":true,"result":"# Example Domain","result_url":null,"error":null,"meta":{}}'
+body='{"token":"test_token","operation":"markdown","labels":{},"success":true,"result":"# Example Domain","result_url":null,"final_url":"https://example.com/","error":null,"meta":{}}'
 timestamp=$(date +%s)
 signature=$(printf '%s.%s' "$timestamp" "$body" \
   | openssl dgst -sha256 -hmac "$URLPIPE_WEBHOOK_SECRET" | sed 's/^.*= //')
